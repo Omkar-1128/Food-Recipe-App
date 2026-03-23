@@ -1,0 +1,38 @@
+.Nav-Image {
+    height: 50px;
+}
+
+.searchInput {
+    width: 400px;
+    margin: auto;
+}
+
+.navItems {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: auto;
+}
+
+.nav-item {
+    margin-right: 30px;
+    font-size: large;
+}
+
+.container-fluid {
+    width: 100% !important;
+    height: 60px !important;
+}
+
+.foodContainer {
+    width: 100%;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    margin: auto;
+}
+
+.navbar {
+    background-color: #F8F3E1 !important;
+}
