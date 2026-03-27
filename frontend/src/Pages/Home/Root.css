@@ -8,5 +8,89 @@
 
 .Root-Container {
     background-color: #FFFDF5;
-    height: 100vh;
+    min-height: 100vh;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.cardImage {
+    min-height: 250px;
+    max-height: 250px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+
+.card {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-8px); /* thoda upar lift */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); /* shadow */
+}
+
+.card:hover .cardImage {
+    transform: scale(1); /* zoom effect */
+}
+
+.favorite-icon {
+    font-size: 20px;
+    color: gray;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.favorite-icon.active {
+    color: red;
+}
+
+.RecipeButton {
+    font-size: 14px;
+    padding: 6px 12px;
+    background-color: #41431B;
+    color: white;
+}
+
+.RecipeButton:hover {
+    background-color: #AEB784;
+}
+
+.favorite-icon {
+    font-size: 22px;
+    color: gray;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.favorite-icon:hover {
+    transform: scale(1.2);
+}
+
+.favorite-icon.active {
+    color: red;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.card-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
 }

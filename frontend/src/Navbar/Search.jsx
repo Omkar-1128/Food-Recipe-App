@@ -1,12 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 import "./Nav.css"
 import { useContext } from "react";
 import { AppContext } from "../Context/AppContext";
 
 function Search() {
-
-    const [query , setQuery] = useState("");
-    const { Loading, setLoading, data, setData } = useContext(AppContext);
+    const { setLoading , query, setQuery , setData , setFlag } = useContext(AppContext);
     // api -> https://forkify-api.jonas.io/api/v2/recipes?search={Search-Query}
 
     async function handleSubmit(e) {
@@ -23,6 +21,14 @@ function Search() {
             console.log("Error Occured: " + e);
         }
     }
+
+    useEffect(() => {
+      if(query.length == 0) {
+        // setFlag(true);
+      } else {
+        setFlag(false);
+      }
+    } , [query , setFlag])
 
   return (
     <div>

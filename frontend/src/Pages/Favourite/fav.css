@@ -1,0 +1,18 @@
+/* Fav page overrides only */
+
+.Fav-Container .cards {
+    justify-content: center; /* center full grid */
+}
+
+.Fav-Container .card {
+    max-width: 300px; /* prevent stretching */
+}
+
+/* Fix uneven spacing when few items */
+.Fav-Container .cards {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
+}
+
+.favorite-icon-color {
+    color: red;
+}
